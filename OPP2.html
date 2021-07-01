@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //    class Cliente {
+    //        #nombre
+    //        constructor (n){
+    //            this.#nombre = n;
+    //        }
+    //    mostrar (){
+    //        return 'el nombre es  ${this.#nombre}';
+    //    }
+    //    }
+    //    let b = new Cliente ("laura");
+    //    
+    //    console.log (b.mostrar());
+
+//  HERENCIA
+//class vehiculo{
+    class Vehiculo {
+            constructor(marca) {
+                this._marca = marca;
+            }
+            get marca() {
+                return this._marca;
+            }
+        }
+        let auto1 = new Vehiculo("Toyota");
+        console.log(`El vehículo es ${auto1.marca}`);
+        class Taxi extends Vehiculo {
+            constructor(marca, km) {
+                super(marca);
+                this._km = km;
+            }
+            mostrar() {
+                return "La marca es " + this._marca + " y tiene " + this._km + " km";
+            }
+        }
+        let auto2 = new Taxi("Ford", 52500);
+        console.log(auto2.mostrar());
+    </script>
+</body>
+</html>
